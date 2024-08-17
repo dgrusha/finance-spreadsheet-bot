@@ -6,11 +6,11 @@ load_dotenv()
 
 class Config:
     ROOT_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
-    TELEGRAM_ACCESS_TOKEN = os.getenv('TELEGRAM_ACCESS_TOKEN')
-    VERSION = os.getenv('VERSION')
-    SERVER_SMTP = (os.getenv('SERVER_SMTP'), 465)
-    MAIL_SMTP = os.getenv('MAIL_SMTP')
-    PASSWORD_SMTP = os.getenv('PASSWORD_SMTP')
+    TELEGRAM_ACCESS_TOKEN = os.getenv("TELEGRAM_ACCESS_TOKEN")
+    VERSION = os.getenv("VERSION")
+    SERVER_SMTP = (os.getenv("SERVER_SMTP"), 465)
+    MAIL_SMTP = os.getenv("MAIL_SMTP")
+    PASSWORD_SMTP = os.getenv("PASSWORD_SMTP")
     LOGGING_CONFIG = {
         "dev": {
             "console": {
@@ -32,9 +32,9 @@ class Config:
             "email_report": {
                 "level": "ERROR",
                 "toaddrs": [
-                    os.getenv('ADMIN_EMAIL'),
+                    os.getenv("ADMIN_EMAIL"),
                 ],
-                "subject": "Sheet finances - error in telegram bot."
+                "subject": "Sheet finances - error in telegram bot.",
             },
-        }
+        },
     }
