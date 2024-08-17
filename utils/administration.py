@@ -3,7 +3,9 @@ from config import Config
 
 
 def check_args():
-    desc = f"Telegram bot for managing your finances in a spreadsheet - {Config.VERSION}"
+    desc = (
+        f"Telegram bot for managing your finances in a spreadsheet - {Config.VERSION}"
+    )
     parser = argparse.ArgumentParser(description=desc)
     parser.add_argument(
         "--type_of_env",
@@ -14,7 +16,7 @@ def check_args():
         type=str,
         choices=["prod", "dev"],
         default="dev",
-        required=False
+        required=False,
     )
     args = parser.parse_args()
     return args
