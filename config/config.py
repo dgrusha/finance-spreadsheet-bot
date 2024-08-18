@@ -11,6 +11,9 @@ class Config:
     SERVER_SMTP = (os.getenv("SERVER_SMTP"), 465)
     MAIL_SMTP = os.getenv("MAIL_SMTP")
     PASSWORD_SMTP = os.getenv("PASSWORD_SMTP")
+    MONGO_DB_URI = os.getenv("MONGO_DB_URI")
+    MONGO_DB_NAME = os.getenv("MONGO_DB_NAME")
+    REDIS_URI = os.getenv("REDIS_DB_URI")
     LOGGING_CONFIG = {
         "dev": {
             "console": {
